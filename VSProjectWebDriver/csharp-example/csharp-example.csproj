@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Capabilities.cs" />
     <Compile Include="CheckMenuAdmin.cs" />
+    <Compile Include="CheckStickerLitecart.cs" />
     <Compile Include="LoginAdmin.cs" />
     <Compile Include="OpenBrowser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
