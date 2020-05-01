@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ *Задание 7. Сделайте сценарий, который выполняет следующие действия в учебном приложении litecart.
+
+1) входит в панель администратора http://localhost/litecart/admin
+2) прокликивает последовательно все пункты меню слева, включая вложенные пункты
+3) для каждой страницы проверяет наличие заголовка (то есть элемента с тегом h1)
+*/
+
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using NUnit.Framework;
@@ -29,67 +38,21 @@ namespace csharp_example
             driver.FindElement(By.Name("password")).SendKeys("admin");
             driver.FindElement(By.Name("login")).Click();
 
-
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[1]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-template.selected")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-logotype")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[2]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-catalog")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-product_groups")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-option_groups")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-manufacturers")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-suppliers")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-delivery_statuses")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-sold_out_statuses")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-quantity_units")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-csv")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[3]")).Click(); FindH1(); //основные пункты
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[4]")).Click(); FindH1(); //основные пункты
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[5]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-customers")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-csv")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-newsletter")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[6]")).Click(); FindH1(); //основные пункты
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[7]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-languages")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-storage_encoding")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[8]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-jobs")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-customer")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-shipping")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-payment")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-order_total")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-order_success")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-order_action")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[9]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-orders")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-order_statuses")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[10]")).Click(); FindH1(); //основные пункты
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[11]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-monthly_sales")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-most_sold_products")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-most_shopping_customers")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[12]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-store_info")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-defaults")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-general")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-listings")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-images")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-checkout")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-advanced")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-security")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[13]")).Click(); FindH1();//основные пункты
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[14]")).Click(); FindH1();//основные пункты
-                driver.FindElement(By.CssSelector("li#doc-tax_classes")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-tax_rates")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[15]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-search")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-scan")).Click(); FindH1();
-                driver.FindElement(By.CssSelector("li#doc-csv")).Click(); FindH1();
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[16]")).Click(); FindH1(); //основные пункты
-            driver.FindElement(By.XPath("(//ul[@id='box-apps-menu'][@class='list-vertical']/li[@id='app-'])[17]")).Click(); FindH1(); //основные пункты
-                driver.FindElement(By.CssSelector("li#doc-vqmods")).Click(); FindH1();
-
+            // Лист элементов основного меню
+            IList<IWebElement> menu = driver.FindElements(By.XPath("//ul[@id='box-apps-menu']/li[@id='app-']")); 
+            for (int i = 1; i <= menu.Count; i++)
+            {
+                driver.FindElement(By.XPath("(//ul[@id='box-apps-menu']/li[@id='app-'])["+i+"]")).Click();
+                FindH1();  //Проверка заголовка Н1
+                
+                // Лист элементов под меню
+                IList<IWebElement> Submenu = driver.FindElements(By.XPath("//ul[@id='box-apps-menu']/li[@id='app-'][@class='selected']/ul[@class='docs']/li[starts-with(@id,'doc-')]"));
+                for (int j = 1; j <= Submenu.Count ; j++)
+                {
+                    driver.FindElement(By.XPath("(//ul[@class = 'docs']/li[starts-with(@id,'doc-')])[" + j + "]")).Click();
+                    FindH1();  //Проверка заголовка Н1
+                }
+            }
         }
 
         public void FindH1()
@@ -97,12 +60,10 @@ namespace csharp_example
             driver.FindElement(By.CssSelector("td#content h1"));
         }
 
-
-
         [TearDown]
         public void stop()
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(500);
             driver.Quit();
             driver = null;
         }
