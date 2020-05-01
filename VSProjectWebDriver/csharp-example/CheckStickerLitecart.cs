@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Задание 8.
+ * Сделайте сценарий, проверяющий наличие стикеров у всех товаров в учебном приложении litecart на главной странице. 
+ * Стикеры -- это полоски в левом верхнем углу изображения товара, на которых написано New или Sale или что-нибудь другое.
+ * Сценарий должен проверять, что у каждого товара имеется ровно один стикер.
+ *
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
@@ -25,19 +34,16 @@ namespace csharp_example
         [Test]
         public void CheckSticker()
         {
-
+            //int sum = 0;
             driver.Navigate().GoToUrl("http://localhost/litecart/en/");
-            IList<IWebElement> links = driver.FindElements(By.CssSelector("li.product.column.shadow.hover-light"));
-            for (int i = 0; i < links.Count; i++)
+            IList<IWebElement> products = driver.FindElements(By.CssSelector("li.product"));
+            for (int i = 0; i < products.Count; i++)
             {
-                // IList < IWebElement > stickers = links[i].FindElements(By.XPath("/a[@class='link']/div[@class='image-wrapper']/div[starts-with(@class,'sticker')]"));
-                IList<IWebElement> stickers = links[i].FindElements(By.CssSelector("a.link>div.image-wrapper>div[class^=sticker]"));
-                Assert.AreEqual(stickers.Count, 1); //Проверка количества стикеров на каждом елементе
+                // IList < IWebElement > stickers = links[i].FindElements(By.XPath("./a[@class='link']/div[@class='image-wrapper']/div[starts-with(@class,'sticker')]"));
+                IList<IWebElement> stickers = products[i].FindElements(By.CssSelector("a.link>div.image-wrapper>div[class^=sticker]"));
+                Assert.AreEqual(1, stickers.Count); //Проверка количества стикеров на каждом елементе
             }
-
-
         }
-
 
 
         [TearDown]
