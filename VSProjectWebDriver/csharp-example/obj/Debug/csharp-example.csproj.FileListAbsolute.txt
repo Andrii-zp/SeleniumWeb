@@ -40,7 +40,7 @@ C:\Users\Andrii\Documents\GitHub\SeleniumWeb\VSProjectWebDriver\csharp-example\b
 C:\Users\Andrii\Documents\GitHub\SeleniumWeb\VSProjectWebDriver\csharp-example\bin\Debug\nunit.framework.xml
 C:\Users\Andrii\Documents\GitHub\SeleniumWeb\VSProjectWebDriver\csharp-example\bin\Debug\WebDriver.xml
 C:\Users\Andrii\Documents\GitHub\SeleniumWeb\VSProjectWebDriver\csharp-example\bin\Debug\WebDriver.Support.xml
-C:\Users\Andrii\Documents\GitHub\SeleniumWeb\VSProjectWebDriver\csharp-example\obj\Debug\csharp-example.csprojResolveAssemblyReference.cache
 C:\Users\Andrii\Documents\GitHub\SeleniumWeb\VSProjectWebDriver\csharp-example\obj\Debug\csharp-example.csproj.CoreCompileInputs.cache
 C:\Users\Andrii\Documents\GitHub\SeleniumWeb\VSProjectWebDriver\csharp-example\obj\Debug\csharp-example.dll
 C:\Users\Andrii\Documents\GitHub\SeleniumWeb\VSProjectWebDriver\csharp-example\obj\Debug\csharp-example.pdb
+C:\Users\Andrii\Documents\GitHub\SeleniumWeb\VSProjectWebDriver\csharp-example\obj\Debug\csharp-example.csprojResolveAssemblyReference.cache
