@@ -67,6 +67,7 @@
     <Compile Include="LoginAdmin.cs" />
     <Compile Include="OpenBrowser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CreateAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
