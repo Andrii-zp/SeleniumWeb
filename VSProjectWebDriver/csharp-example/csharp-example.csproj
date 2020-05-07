@@ -64,6 +64,7 @@
     <Compile Include="CheckStickerLitecart.cs" />
     <Compile Include="CheckSort.cs" />
     <Compile Include="CheckCorrectPage.cs" />
+    <Compile Include="AddProduct.cs" />
     <Compile Include="LoginAdmin.cs" />
     <Compile Include="OpenBrowser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="blackDuck.png" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
