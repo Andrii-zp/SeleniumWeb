@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Capabilities.cs" />
     <Compile Include="CheckMenuAdmin.cs" />
+    <Compile Include="CheckShoppingCart.cs" />
     <Compile Include="CheckStickerLitecart.cs" />
     <Compile Include="CheckSort.cs" />
     <Compile Include="CheckCorrectPage.cs" />
