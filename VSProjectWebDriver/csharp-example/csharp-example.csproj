@@ -66,6 +66,7 @@
     <Compile Include="CheckSort.cs" />
     <Compile Include="CheckCorrectPage.cs" />
     <Compile Include="AddProduct.cs" />
+    <Compile Include="CheckNewWindow.cs" />
     <Compile Include="LoginAdmin.cs" />
     <Compile Include="OpenBrowser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
