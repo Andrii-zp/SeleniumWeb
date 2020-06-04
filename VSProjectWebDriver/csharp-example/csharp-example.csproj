@@ -68,9 +68,17 @@
     <Compile Include="AddProduct.cs" />
     <Compile Include="CheckNewWindow.cs" />
     <Compile Include="CheckBrowserLog.cs" />
-    <Compile Include="PageObject.cs" />
     <Compile Include="LoginAdmin.cs" />
     <Compile Include="OpenBrowser.cs" />
+    <Compile Include="PageObjectCustomerRegistration\app\Application.cs" />
+    <Compile Include="PageObjectCustomerRegistration\model\Customer.cs" />
+    <Compile Include="PageObjectCustomerRegistration\pages\AdminPanelLoginPage.cs" />
+    <Compile Include="PageObjectCustomerRegistration\pages\RegistrationPage.cs" />
+    <Compile Include="PageObjectCustomerRegistration\pages\Page.cs" />
+    <Compile Include="PageObjectCustomerRegistration\pages\CustomerListPage.cs" />
+    <Compile Include="PageObjectCustomerRegistration\tests\CustomerRegistrationTests.cs" />
+    <Compile Include="PageObjectCustomerRegistration\tests\DataProviders.cs" />
+    <Compile Include="PageObjectCustomerRegistration\tests\TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CreateAccount.cs" />
   </ItemGroup>
@@ -80,6 +88,7 @@
   <ItemGroup>
     <Content Include="blackDuck.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
